@@ -1,11 +1,12 @@
 package de.awesome.corporate.newworlds.data.login.repository;
 
-import org.springframework.data.repository.Repository;
-import org.springframework.stereotype.Component;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import de.awesome.corporate.newworlds.data.login.entity.UserAccount;
 
-@Component
-public interface UserAccountRepository extends Repository<UserAccount, String> {
+@Repository
+public interface UserAccountRepository extends JpaRepository<UserAccount, String> {
 	
 }

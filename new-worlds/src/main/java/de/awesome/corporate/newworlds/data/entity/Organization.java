@@ -1,5 +1,6 @@
 package de.awesome.corporate.newworlds.data.entity;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -7,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import de.awesome.corporate.newworlds.data.financials.entity.FinancialContract;
 
@@ -32,8 +34,9 @@ public class Organization {
 	@Column(name="liquidAssets")
 	private double liquidAssets;
 	
+	@OneToMany
 	@Column(name="financialContracts")
-	private Set<FinancialContract> finContracts;
+	private List<FinancialContract> finContracts;
 
 	public String getUid() {
 		return uid;
@@ -67,11 +70,11 @@ public class Organization {
 		this.liquidAssets = liquidAssets;
 	}
 
-	public Set<FinancialContract> getFinContracts() {
+	public List<FinancialContract> getFinContracts() {
 		return finContracts;
 	}
 
-	public void setFinContracts(Set<FinancialContract> finContracts) {
+	public void setFinContracts(List<FinancialContract> finContracts) {
 		this.finContracts = finContracts;
 	}
 	

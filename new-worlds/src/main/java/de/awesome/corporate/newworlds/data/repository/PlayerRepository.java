@@ -1,9 +1,11 @@
 package de.awesome.corporate.newworlds.data.repository;
 
-import org.springframework.data.repository.Repository;
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@Component
-public interface PlayerRepository extends Repository<PlayerRepository, String> {
+import de.awesome.corporate.newworlds.data.entity.Player;
+
+@Repository
+public interface PlayerRepository extends JpaRepository<Player, String> {
 
 }
