@@ -15,12 +15,39 @@ import javax.persistence.Id;
 @Entity
 public class GameInfo {
 
+	@Column(name="name")
+	private String name;
+	
 	@Id
 	@Column(name="turn")
 	private long turn;
 	
 	@Column(name="date")
 	private LocalDateTime date;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public long getTurn() {
+		return turn;
+	}
+
+	public void setTurn(long turn) {
+		this.turn = turn;
+	}
+
+	public LocalDateTime getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDateTime date) {
+		this.date = date;
+	}
 	
 	
 }
