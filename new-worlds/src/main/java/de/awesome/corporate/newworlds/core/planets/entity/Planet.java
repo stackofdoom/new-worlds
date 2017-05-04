@@ -1,5 +1,8 @@
 package de.awesome.corporate.newworlds.core.planets.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Planet {
 	
 	/*
@@ -63,5 +66,61 @@ public class Planet {
 	 *Undiscovered species 
 	 */
 	private Nature nature;
+
+	public double getForestation() {
+		return forestation;
+	}
+
+	public double getWaterquality() {
+		return waterquality;
+	}
+
+	public double getSoilquality() {
+		return soilquality;
+	}
+
+	public double getAtmosphere() {
+		return atmosphere;
+	}
+
+	public double getNaturalness() {
+		return naturalness;
+	}
+
+	public EnvironmentInfluence getEnvironment() {
+		return environment;
+	}
+
+	public Nature getNature() {
+		return nature;
+	}
+
+	public void setForestation(double forestation) {
+		this.forestation = forestation;
+	}
+
+	public void setWaterquality(double waterquality) {
+		this.waterquality = waterquality;
+	}
+
+	public void setSoilquality(double soilquality) {
+		this.soilquality = soilquality;
+	}
+
+	public void setAtmosphere(double atmosphere) {
+		this.atmosphere = atmosphere;
+	}
+
+	public void setNaturalness(double naturalness) {
+		this.naturalness = naturalness;
+	}
+
+	public void setEnvironment(EnvironmentInfluence environment) {
+		this.environment = environment;
+	}
+
+	public void setNature(Nature nature) {
+		this.nature = nature;
+	}
 
 }
