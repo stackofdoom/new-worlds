@@ -6,6 +6,24 @@ import javax.persistence.Entity;
 public class Planet {
 	
 	/*
+	 * The classification of planets
+	 * and associated descriptions and properties
+	 */
+	private PlanetClassProperties planetClassProperties;
+	
+	/*
+	 * the gravity of the planet. 
+	 * gravity increases industry costs for constructions and increases fuel cost of lifting off
+	 * rockets from the planet.
+	 * Soldiers have advantage versus soldiers borne on lower gravity worlds on the ground.
+	 * Structures are more resistant to bombardment.
+	 * 
+	 * lower gravity slightly decreases industry cost for constructions and decreases fuel cost for lifting off
+	 * rockets. Structures are less resistant to bombardment.
+	 */
+	private double gravity;
+	
+	/*
 	 * The amount of vegetation on the planet
 	 * Determines the amount of forests and larger vegetative bodies.
 	 * A value of 0 represents an emtpy world without trees and possibly devastating winds.
@@ -121,6 +139,22 @@ public class Planet {
 
 	public void setNature(Nature nature) {
 		this.nature = nature;
+	}
+
+	public PlanetClassProperties getPlanetClassProperties() {
+		return planetClassProperties;
+	}
+
+	public double getGravity() {
+		return gravity;
+	}
+
+	public void setPlanetClassProperties(PlanetClassProperties planetClassProperties) {
+		this.planetClassProperties = planetClassProperties;
+	}
+
+	public void setGravity(double gravity) {
+		this.gravity = gravity;
 	}
 
 }

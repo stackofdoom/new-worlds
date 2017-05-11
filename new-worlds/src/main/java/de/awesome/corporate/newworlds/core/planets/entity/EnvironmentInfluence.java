@@ -19,8 +19,14 @@ public class EnvironmentInfluence {
 	//the maximum intensity for rain
 	private double rainintensity;
 	
+	/*
+	 * The average temperature is 15° for Terran Planets (like earth 1850s)
+	 */
 	private double averageTemperature;
-	//highest temperature
+	
+	/*
+	 * 
+	 */
 	private double peaktemperature;
 	//lowest temperature
 	private double lowestTemperature;
