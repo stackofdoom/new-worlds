@@ -3,14 +3,10 @@
  */
 package de.awesome.corporate.newworlds.core.usermanagement.controller;
 
-import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.UUID;
 
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,8 +20,8 @@ import de.awesome.corporate.newworlds.data.entity.Player;
  *
  */
 @RestController
-@RequestMapping("/players")
-public class PlayerController {
+@RequestMapping("/registration")
+public class PlayerRegistrationController {
 	
 	
 	@PostMapping("/register")
@@ -35,7 +31,7 @@ public class PlayerController {
 		player.setOwnedOrganizations(new HashSet<Organization>());
 		player.setPlayername(registrationBody.getName());
 		player.setUserAccount(registrationBody.getUseraccount());
-		player.setUid(player.hashCode()+"");
+		player.setUid(UUID.randomUUID().toString());
 		return player;
 	}
 	

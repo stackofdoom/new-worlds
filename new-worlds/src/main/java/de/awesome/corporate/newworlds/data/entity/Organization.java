@@ -1,7 +1,6 @@
 package de.awesome.corporate.newworlds.data.entity;
 
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

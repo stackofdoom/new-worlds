@@ -6,7 +6,7 @@ package de.awesome.corporate.newworlds.core.usermanagement.controller.rest;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author Patrick Schmolke (patrick.schmolke@acando.de)
+ * @author Patrick Schmolke
  *
  */
 public class PlayerRegistrationBody {
@@ -16,6 +16,9 @@ public class PlayerRegistrationBody {
 	
 	@NotNull
 	private String useraccount;
+	
+	@NotNull
+	private String password;
 	
 	public PlayerRegistrationBody(){
 		
@@ -42,4 +45,13 @@ public class PlayerRegistrationBody {
 		this.useraccount = useraccount;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	
 }
