@@ -9,6 +9,7 @@ public class PlayerRegistrationOrganisationSetupBody {
 	private int population;
 	private int crops;
 	private int cattle;
+	private String playerid;
 
 	public String getOrganizationName() {
 		return organizationName;
@@ -64,6 +65,14 @@ public class PlayerRegistrationOrganisationSetupBody {
 
 	public void setCattle(int cattle) {
 		this.cattle = cattle;
+	}
+
+	public String getPlayerid() {
+		return playerid;
+	}
+
+	public void setPlayerid(String playerid) {
+		this.playerid = playerid;
 	}
 
 }
