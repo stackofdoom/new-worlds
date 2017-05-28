@@ -30,13 +30,14 @@ public class PlayerRegistrationController {
 	private RegistrationService registrationService;
 	
 	@PostMapping("/register")
-	public Player registerPlayer(PlayerRegistrationBody registrationBody, BindingResult bindingResult){
+	public PlayerRegistrationResponseBody registerPlayer(PlayerRegistrationBody registrationBody, BindingResult bindingResult){
 		Player player = registrationService.registerPlayer(registrationBody);
 
 		PlayerRegistrationResponseBody response = new PlayerRegistrationResponseBody();
 		response.setPlayername(player.getPlayername());;
 		response.setUuid(player.getUid());
-		return player;
+		
+		return response; 
 	}
 	
 }

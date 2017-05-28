@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import de.awesome.corporate.newworlds.core.gameserver.service.GameTimerService;
-import de.awesome.corporate.newworlds.data.entity.Player;
+import de.awesome.corporate.newworlds.core.usermanagement.entity.Player;
 import de.awesome.corporate.newworlds.data.financials.entity.FinancialContract;
 import de.awesome.corporate.newworlds.data.financials.repository.FinancialContractRepository;
 
