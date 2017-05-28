@@ -1,4 +1,4 @@
-package de.awesome.corporate.newworlds.data.entity;
+package de.awesome.corporate.newworlds.core.usermanagement.entity;
 
 import java.util.List;
 

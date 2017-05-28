@@ -20,6 +20,9 @@ public class PlayerRegistrationBody {
 	@NotNull
 	private String password;
 	
+	@NotNull
+	private String email;
+	
 	public PlayerRegistrationBody(){
 		
 	}
@@ -51,6 +54,14 @@ public class PlayerRegistrationBody {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	
