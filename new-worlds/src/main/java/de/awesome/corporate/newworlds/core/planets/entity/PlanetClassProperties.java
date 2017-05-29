@@ -8,9 +8,6 @@ import javax.persistence.Id;
 @Embeddable
 public class PlanetClassProperties {
 
-	@Id
-	@Column(name="UID")
-	private String uid;
 	//The part of the planet covered by water
 	private double waterarea;
 	//the part covered by land

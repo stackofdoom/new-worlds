@@ -1,14 +1,24 @@
 package de.awesome.corporate.newworlds.core.planets.entity;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Planet {
+	
+
+	@GeneratedValue
+	@Id
+	private long uid;
 	
 	/*
 	 * The classification of planets
 	 * and associated descriptions and properties
 	 */
+	@Embedded
 	private PlanetClassProperties planetClassProperties;
 	
 	/*

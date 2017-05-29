@@ -1,8 +1,17 @@
 package de.awesome.corporate.newworlds.core.infrastructure.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import de.awesome.corporate.newworlds.core.infrastructure.types.EResourceType;
 
+@Entity
 public class ResourceCost {
+	
+	@GeneratedValue
+	@Id
+	private long id;
 
 	private EResourceType resource;
 	// the price
