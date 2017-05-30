@@ -17,7 +17,7 @@ public class FinancialContractService {
 	@Autowired
 	private GameTimerService timerService;
 	
-	public void createFinancialContract(Player contractor, Player contractee, double amount, double interest, int length, int interval){
+	public FinancialContract createFinancialContract(Player contractor, Player contractee, double amount, double interest, int length, int interval){
 		FinancialContract contract = new FinancialContract();
 		contract.setOwnerId(contractor.getUid());
 		contract.setPartnerId(contractee.getUid());
@@ -29,7 +29,8 @@ public class FinancialContractService {
 		contract.setInitiationTime(timerService.getCurrentTurn());
 		contract.setReevaluationTime(interval);
 		contract.setTotalInterest(0);
-		financialContractRepository.save(contract);
+		contract = financialContractRepository.save(contract);
+		return contract;
 	}
 	
 	

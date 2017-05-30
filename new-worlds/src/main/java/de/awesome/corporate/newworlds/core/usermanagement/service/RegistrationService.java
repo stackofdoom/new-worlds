@@ -1,6 +1,7 @@
 package de.awesome.corporate.newworlds.core.usermanagement.service;
 
 import de.awesome.corporate.newworlds.core.usermanagement.controller.rest.PlayerRegistrationBody;
+import de.awesome.corporate.newworlds.core.usermanagement.controller.rest.PlayerRegistrationOrganisationSetupBody;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Organization;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Player;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.UserAccount;
@@ -26,6 +27,9 @@ public class RegistrationService {
 	private UserAccountRepository userRepository;
 	
 	@Autowired
+	private OrganizationCreationService organizationCreationService;
+	
+	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
 	public Player registerPlayer(PlayerRegistrationBody registrationBody){
@@ -46,6 +50,11 @@ public class RegistrationService {
 		userRepository.save(usrAccount);
 		//TODO: remove dummy register in service
 		return player;
+	}
+
+	public Organization setupOrganization(PlayerRegistrationOrganisationSetupBody setupBody) {
+		Organization org = organizationCreationService.createOrganization(setupBody);
+		return org;
 	}
 
 }
