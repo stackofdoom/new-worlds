@@ -1,6 +1,5 @@
 package de.awesome.corporate.newworlds.core.usermanagement.service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.validation.ValidationException;
@@ -8,13 +7,13 @@ import javax.validation.ValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter;
 
 import de.awesome.corporate.newworlds.core.usermanagement.controller.rest.PlayerRegistrationOrganisationSetupBody;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Organization;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Player;
 import de.awesome.corporate.newworlds.core.usermanagement.repository.PlayerRepository;
 import de.awesome.corporate.newworlds.data.financials.entity.FinancialContract;
+import de.awesome.corporate.newworlds.data.financials.service.ContractTerminationType;
 import de.awesome.corporate.newworlds.data.financials.service.FinancialContractService;
 
 public class OrganizationCreationService {
@@ -97,7 +96,7 @@ public class OrganizationCreationService {
 		org.setOwner(setupBody.getPlayerid());
 		org.setOrganizationName(setupBody.getOrganizationName());
 		Player player = playerRep.getOne(setupBody.getPlayerid());
-		FinancialContract contract = finService.createFinancialContract(playerRep.getOne("TerraUnited"), player, totalExpenses, BASIC_INTEREST, DEFAULT_LENGTH, DEFAULT_INTERVAL);
+		FinancialContract contract = finService.createFinancialContract(playerRep.getOne("TerraUnited"), player, totalExpenses, BASIC_INTEREST, DEFAULT_LENGTH, DEFAULT_INTERVAL, ContractTerminationType.UNLIMITED_TERRATRADE);
 		org.setFinContracts(Arrays.asList(contract));
 		
 		LOGGER.info("created new player organization for player={} with a starting setup of {}, where organization={}", player, setup, org);

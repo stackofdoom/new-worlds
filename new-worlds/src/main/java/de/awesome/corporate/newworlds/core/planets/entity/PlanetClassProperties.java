@@ -1,9 +1,9 @@
 package de.awesome.corporate.newworlds.core.planets.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
-import javax.persistence.Id;
+
+import de.awesome.corporate.newworlds.core.planets.entity.enums.PlanetClass;
 
 @Embeddable
 public class PlanetClassProperties {

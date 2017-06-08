@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import de.awesome.corporate.newworlds.data.financials.service.ContractTerminationType;
+
 /**
  * A financial contract is any contract that binds the owner financially.
  * <p>The owner is the entity that the control. This can either mean that someone has a financial obligation to him,
@@ -38,13 +40,6 @@ public class FinancialContract {
 	private long duration;
 	
 	/*
-	 * true if the partner must pay the owner.
-	 * Is false if the partner
-	 */
-	@Column(name="obligationToOwner")
-	private boolean obligationToOwner;
-	
-	/*
 	 * true if the owner is a player
 	 */
 	@Column(name="playerowned")
@@ -66,8 +61,8 @@ public class FinancialContract {
 	/*
 	 * if automaticInterest is true, this field has the information of which calculator to use.
 	 */
-	@Column(name="interestCalculator")
-	private String interestCalculator;
+	@Column(name="terminationType")
+	private ContractTerminationType terminationType;
 	
 	/*
 	 * interval for new interest calculation.
@@ -130,13 +125,6 @@ public class FinancialContract {
 		this.duration = duration;
 	}
 
-	public boolean isObligationToOwner() {
-		return obligationToOwner;
-	}
-
-	public void setObligationToOwner(boolean obligationToOwner) {
-		this.obligationToOwner = obligationToOwner;
-	}
 
 	public boolean isPlayerOwned() {
 		return playerOwned;
@@ -162,14 +150,6 @@ public class FinancialContract {
 		this.automaticInterest = automaticInterest;
 	}
 
-	public String getInterestCalculator() {
-		return interestCalculator;
-	}
-
-	public void setInterestCalculator(String interestCalculator) {
-		this.interestCalculator = interestCalculator;
-	}
-
 	public long getReevaluationTime() {
 		return reevaluationTime;
 	}
@@ -186,14 +166,21 @@ public class FinancialContract {
 		this.initiationTime = initiationTime;
 	}
 
+	public ContractTerminationType getTerminationType() {
+		return terminationType;
+	}
+
+	public void setTerminationType(ContractTerminationType terminationType) {
+		this.terminationType = terminationType;
+	}
+
 	@Override
 	public String toString() {
 		return "FinancialContract [uid=" + uid + ", ownerId=" + ownerId + ", partnerId=" + partnerId + ", value="
-				+ value + ", totalInterest=" + totalInterest + ", duration=" + duration + ", obligationToOwner="
-				+ obligationToOwner + ", playerOwned=" + playerOwned + ", active=" + active + ", automaticInterest="
-				+ automaticInterest + ", interestCalculator=" + interestCalculator + ", reevaluationTime="
-				+ reevaluationTime + ", initiationTime=" + initiationTime + "]";
+				+ value + ", totalInterest=" + totalInterest + ", duration=" + duration + ", playerOwned=" + playerOwned
+				+ ", active=" + active + ", automaticInterest=" + automaticInterest + ", terminationType="
+				+ terminationType + ", reevaluationTime=" + reevaluationTime + ", initiationTime=" + initiationTime
+				+ "]";
 	}
-	
 
 }

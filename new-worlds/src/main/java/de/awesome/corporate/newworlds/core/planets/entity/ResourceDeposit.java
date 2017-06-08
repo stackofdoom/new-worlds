@@ -8,6 +8,8 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import de.awesome.corporate.newworlds.core.planets.entity.enums.EDepositState;
+
 /**
  * Represents a resource deposit on a stellar body. Deposits can be exploited to
  * reap benefit from the availability of that resource. Resources can be
