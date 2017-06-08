@@ -3,7 +3,7 @@ package de.awesome.corporate.newworlds.core.usermanagement.controller.rest;
 public class PlayerRegistrationOrganisationSetupBody {
 
 	private String organizationName;
-	private String specialization;
+	private OrganizationSpecialization specialization;
 	private int numberOfCapsules;
 	private int industry;
 	private int population;
@@ -15,7 +15,7 @@ public class PlayerRegistrationOrganisationSetupBody {
 		return organizationName;
 	}
 
-	public String getSpecialization() {
+	public OrganizationSpecialization getSpecialization() {
 		return specialization;
 	}
 
@@ -43,7 +43,7 @@ public class PlayerRegistrationOrganisationSetupBody {
 		this.organizationName = organizationName;
 	}
 
-	public void setSpecialization(String specialization) {
+	public void setSpecialization(OrganizationSpecialization specialization) {
 		this.specialization = specialization;
 	}
 
