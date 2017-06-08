@@ -2,25 +2,35 @@ package de.awesome.corporate.newworlds.core.usermanagement.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class UserAccount {
 	
+	@NotNull
 	private String accountName;
+	@NotNull
 	private String emailAddress;
+	@NotNull
 	private String passwordHash;
+	@NotNull
 	private String playerId;
+	
 	@Id
 	private Long id;
 
 	public String getAccountName() {
 		return accountName;
 	}
-
+	
+	@JsonIgnore
 	public String getEmailAddress() {
 		return emailAddress;
 	}
 
+	@JsonIgnore
 	public String getPasswordHash() {
 		return passwordHash;
 	}
