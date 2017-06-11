@@ -7,11 +7,14 @@ import java.util.Set;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 
 import de.awesome.corporate.newworlds.core.types.AbstractNamedEntity;
 
 @Entity
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public class AbstractPlanetoid extends AbstractNamedEntity{
 	
 	/*

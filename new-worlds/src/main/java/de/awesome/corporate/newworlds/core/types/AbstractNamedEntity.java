@@ -3,8 +3,11 @@ package de.awesome.corporate.newworlds.core.types;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class AbstractNamedEntity {
 	
 	@Id

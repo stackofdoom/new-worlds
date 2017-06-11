@@ -13,13 +13,12 @@ public class GameTimerService {
 	
 	@Autowired
 	private GameInfoRepository gameInfoRepository;
+	private GameInfo gameinfo;
+	private LocalDateTime time;
 	
 	public GameTimerService(){
 		
 	}
-
-	private GameInfo gameinfo;
-	private LocalDateTime time;
 	
 	public void startup(){
 		gameinfo = gameInfoRepository.findByName("current");
@@ -29,5 +28,4 @@ public class GameTimerService {
 	public long getCurrentTurn(){
 		return gameinfo.getTurn();
 	}
-	
 }
