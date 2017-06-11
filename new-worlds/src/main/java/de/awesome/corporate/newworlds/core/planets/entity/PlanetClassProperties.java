@@ -15,7 +15,6 @@ public class PlanetClassProperties {
 	//the part of the land that is covered by mountains
 	private double mountains;
 	//class of the planet
-	@Embedded
 	private PlanetClass planetClass;
 	
 }
