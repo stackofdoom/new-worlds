@@ -29,7 +29,7 @@ public class ResourceDeposit {
 	private EDepositState depositState;
 	//The current progress of expoitation
 	@Embedded
-	private ExploitationProgress exploitationProgress;
+	private Progress exploitationProgress;
 	//the deposits health value. if it reaches 0, its state is set to blocked.
 	@Embedded
 	private EntityHealth health;
@@ -46,7 +46,7 @@ public class ResourceDeposit {
 		return depositState;
 	}
 	
-	public ExploitationProgress getExploitationProgress() {
+	public Progress getExploitationProgress() {
 		return exploitationProgress;
 	}
 	
@@ -70,7 +70,7 @@ public class ResourceDeposit {
 		this.depositState = depositState;
 	}
 	
-	public void setExploitationProgress(ExploitationProgress exploitationProgress) {
+	public void setExploitationProgress(Progress exploitationProgress) {
 		this.exploitationProgress = exploitationProgress;
 	}
 	
