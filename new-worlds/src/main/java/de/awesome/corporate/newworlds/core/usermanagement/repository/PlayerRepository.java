@@ -7,5 +7,7 @@ import de.awesome.corporate.newworlds.core.usermanagement.entity.Player;
 
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, String>{
-
+	
+	Player findByUserAccount(String useraccount);
+	
 }
