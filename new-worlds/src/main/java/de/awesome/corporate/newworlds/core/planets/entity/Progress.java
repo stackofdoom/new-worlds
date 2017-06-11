@@ -3,11 +3,11 @@ package de.awesome.corporate.newworlds.core.planets.entity;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class ExploitationProgress {
+public class Progress {
 	private long progressNecessary;
 	private long progressCurrent;
 	
-	public ExploitationProgress(){
+	public Progress(){
 		//Empty default constructor
 	}
 
