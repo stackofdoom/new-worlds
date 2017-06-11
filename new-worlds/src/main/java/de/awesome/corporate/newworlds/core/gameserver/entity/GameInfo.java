@@ -3,6 +3,7 @@ package de.awesome.corporate.newworlds.core.gameserver.entity;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity; 
 import javax.persistence.Id;
 
@@ -24,6 +25,9 @@ public class GameInfo {
 	
 	@Column(name="date")
 	private LocalDateTime date;
+	
+	@Embedded
+	private CalculationTime calculationTime;
 
 	public String getName() {
 		return name;
@@ -48,6 +52,16 @@ public class GameInfo {
 	public void setDate(LocalDateTime date) {
 		this.date = date;
 	}
+
+	public CalculationTime getCalculationTime() {
+		return calculationTime;
+	}
+
+	public void setCalculationTime(CalculationTime calculationTime) {
+		this.calculationTime = calculationTime;
+	}
+	
+	
 	
 	
 }
