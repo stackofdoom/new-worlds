@@ -7,6 +7,7 @@ import javax.validation.ValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import de.awesome.corporate.newworlds.core.usermanagement.controller.rest.PlayerRegistrationOrganisationSetupBody;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Organization;
@@ -16,6 +17,7 @@ import de.awesome.corporate.newworlds.data.financials.entity.FinancialContract;
 import de.awesome.corporate.newworlds.data.financials.service.ContractTerminationType;
 import de.awesome.corporate.newworlds.data.financials.service.FinancialContractService;
 
+@Service
 public class OrganizationCreationService {
 	
 	@Autowired
