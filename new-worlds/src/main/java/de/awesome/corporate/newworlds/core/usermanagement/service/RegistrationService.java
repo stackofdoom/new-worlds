@@ -5,8 +5,8 @@ import de.awesome.corporate.newworlds.core.usermanagement.controller.rest.Player
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Organization;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.Player;
 import de.awesome.corporate.newworlds.core.usermanagement.entity.UserAccount;
-import de.awesome.corporate.newworlds.core.usermanagement.repository.PlayerRepository;
 import de.awesome.corporate.newworlds.core.usermanagement.repository.UserAccountRepository;
+import de.awesome.corporate.newworlds.core.usermanagement.repository.PlayerRepository;
 
 import java.util.HashSet;
 import java.util.UUID;
