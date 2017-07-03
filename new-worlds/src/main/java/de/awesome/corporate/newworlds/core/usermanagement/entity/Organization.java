@@ -20,7 +20,6 @@ import de.awesome.corporate.newworlds.data.financials.entity.FinancialContract;
 public class Organization {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="uid")
 	private String uid;
 	

@@ -18,7 +18,6 @@ import javax.persistence.OneToMany;
 public class Player {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="uid")
 	private String uid;
 	
