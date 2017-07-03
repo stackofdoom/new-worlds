@@ -1,6 +1,7 @@
 package de.awesome.corporate.newworlds.core.usermanagement.service;
 
 import java.util.Arrays;
+import java.util.UUID;
 
 import javax.validation.ValidationException;
 
@@ -102,6 +103,7 @@ public class OrganizationCreationService {
 		org.setFinContracts(Arrays.asList(contract));
 		
 		LOGGER.info("created new player organization for player={} with a starting setup of {}, where organization={}", player, setup, org);
+		org.setUid(UUID.fromString(org.getOrganizationName()+org.getOwner()).toString());
 		return org;
 	}
 	

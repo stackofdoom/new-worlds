@@ -1,7 +1,6 @@
 package de.awesome.corporate.newworlds.core.planets.entity;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
 
 import de.awesome.corporate.newworlds.core.planets.entity.enums.PlanetClass;
 
