@@ -27,7 +27,7 @@ public class RegistrationService {
 	@Autowired
 	private OrganizationCreationService organizationCreationService;
 	
-	private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(256);
+	private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(12);
 	
 	public Player registerPlayer(PlayerRegistrationBody registrationBody){
 		Player player = new Player();
