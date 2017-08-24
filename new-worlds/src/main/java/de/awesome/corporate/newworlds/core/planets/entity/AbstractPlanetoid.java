@@ -11,6 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 
+import de.awesome.corporate.newworlds.core.planets.city.City;
 import de.awesome.corporate.newworlds.core.types.AbstractNamedEntity;
 
 @Entity
