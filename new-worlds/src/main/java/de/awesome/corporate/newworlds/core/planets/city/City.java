@@ -1,4 +1,4 @@
-package de.awesome.corporate.newworlds.core.planets.entity;
+package de.awesome.corporate.newworlds.core.planets.city;
 
 import javax.persistence.Entity;
 
