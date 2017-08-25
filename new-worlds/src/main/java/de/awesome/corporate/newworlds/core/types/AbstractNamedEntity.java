@@ -1,17 +1,16 @@
 package de.awesome.corporate.newworlds.core.types;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.NotNull;
 
-@Entity
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@MappedSuperclass
 public class AbstractNamedEntity {
 	
 	@Id
 	@Column(name="UID")
+	@NotNull
 	private String uid;
 	
 	private String name;
