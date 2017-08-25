@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class UserAccount {
 	
 	@NotNull
+	@Id
 	private String accountName;
 	@NotNull
 	private String emailAddress;
@@ -17,9 +18,6 @@ public class UserAccount {
 	private String passwordHash;
 	@NotNull
 	private String playerId;
-	
-	@Id
-	private Long id;
 
 	public String getAccountName() {
 		return accountName;

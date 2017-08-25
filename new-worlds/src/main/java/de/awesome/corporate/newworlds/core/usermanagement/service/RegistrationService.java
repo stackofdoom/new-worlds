@@ -37,12 +37,13 @@ public class RegistrationService {
 		player.setUserAccount(registrationBody.getUseraccount());
 		player.setUid(UUID.randomUUID().toString());
 		
-		playerRepository.save(player);
+		String userId = playerRepository.save(player).getUid();
 		
 		UserAccount usrAccount = new UserAccount();
 		usrAccount.setAccountName(registrationBody.getUseraccount());
 		usrAccount.setEmailAddress(registrationBody.getEmail());
 		usrAccount.setPasswordHash(passwordEncoder.encode(registrationBody.getPassword()));
+		usrAccount.setPlayerId(userId);
 		
 		userRepository.save(usrAccount);
 		//TODO: remove dummy register in service
