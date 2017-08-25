@@ -11,5 +11,9 @@ public enum AssignableResource {
 	//produced by acricultural infrastructure
 	AGRICULTURE,
 	//Produced by Headquarters
-	ADMINISTRATION
+	ADMINISTRATION,
+	//
+	POPULATION,
+	//Produced by Powerplants
+	POWER
 }
