@@ -38,7 +38,7 @@ public class PlayerRegistrationController {
 		return response; 
 	}
 	
-	@PostMapping("register/setup/")
+	@PostMapping("/register/setup/")
 	public void createOrganization(PlayerRegistrationOrganisationSetupBody setupBody){
 		Organization org = registrationService.setupOrganization(setupBody);
 	}
