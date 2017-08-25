@@ -2,12 +2,13 @@ package de.awesome.corporate.newworlds.core.projects.types;
 
 import java.util.HashMap;
 
+import javax.persistence.MappedSuperclass;
+
 import de.awesome.corporate.newworlds.core.types.AbstractNamedEntity;
 import de.awesome.corporate.newworlds.core.types.StackableResource;
 
+@MappedSuperclass
 public abstract class AbstractProject extends AbstractNamedEntity{
-	
-	protected Progress progress;
 	
 	protected HashMap<AssignableResource, Double> usedResources;
 	
@@ -32,10 +33,6 @@ public abstract class AbstractProject extends AbstractNamedEntity{
 	public HashMap<StackableResource, Double> getProducedStacks() {
 		return producedStacks;
 	}
-	
-	public Progress getProgress(){
-		return progress;
-	}
 
 	public void setUsedResources(
 	        HashMap<AssignableResource, Double> usedResources) {
@@ -54,10 +51,6 @@ public abstract class AbstractProject extends AbstractNamedEntity{
 	public void setProducedStacks(
 	        HashMap<StackableResource, Double> producedStacks) {
 		this.producedStacks = producedStacks;
-	}
-	
-	public void setProgress(Progress progress){
-		this.progress = progress;
 	}
 	
 }

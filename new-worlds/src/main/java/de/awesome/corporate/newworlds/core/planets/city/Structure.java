@@ -6,7 +6,6 @@ package de.awesome.corporate.newworlds.core.planets.city;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 
-import de.awesome.corporate.newworlds.core.projects.StructureProject;
 import de.awesome.corporate.newworlds.core.types.AbstractNamedEntity;
 import de.awesome.corporate.newworlds.core.types.Health;
 
@@ -14,7 +13,7 @@ import de.awesome.corporate.newworlds.core.types.Health;
  * Represents all Structures on the ground.
  *
  */
-@Entity
+@Entity(name="Structure")
 public class Structure extends AbstractNamedEntity {
 	
 	@Embedded
@@ -23,7 +22,7 @@ public class Structure extends AbstractNamedEntity {
 	@Embedded
 	private StructureModifier modifier;
 	
-	private StructureProject type;
+	private String type;
 	
 	public void setHealth(Health health){
 		this.health = health;
@@ -33,11 +32,11 @@ public class Structure extends AbstractNamedEntity {
 		return health;
 	}
 	
-	public void setType(StructureProject type){
+	public void setType(String type){
 		this.type = type;
 	}
 	
-	public StructureProject getType(){
+	public String getType(){
 		return type;
 	}
 }
